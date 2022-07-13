@@ -47,7 +47,7 @@ public class Turret : MonoBehaviour
     void targetOff()
     {
         _totalDeltaTime = BulletSpawnTime;
-        transform.Rotate(0f, TurretHeadSpeed * Time.deltaTime, 0f);
+        transform.Rotate(0f, TurretHeadSpeed* Time.deltaTime, 0f);
     }
 
 }
