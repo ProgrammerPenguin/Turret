@@ -11,10 +11,12 @@ public class Turret : MonoBehaviour
 
     private float _totalDeltaTime;
     private TurretTargetting _turretTargetting;
+    private SphereCollider _sphereCollider;
     // Start is called before the first frame update
     void Awake()
     {
         _turretTargetting = GetComponent<TurretTargetting>();
+        _sphereCollider = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -28,11 +30,8 @@ public class Turret : MonoBehaviour
         {
             targetOff();
         }
-        
-
-       
     }
-
+       
     void targetOn()
     {
         transform.LookAt(_turretTargetting.Target.transform);
@@ -48,7 +47,11 @@ public class Turret : MonoBehaviour
     void targetOff()
     {
         _totalDeltaTime = BulletSpawnTime;
-        //transform.Rotate(0f, TurretHeadSpeed* Time.deltaTime, 0f);
+        
+        if(transform.rotation.y < 0)
+        {
+            transform.Rotate(0f, TurretHeadSpeed* Time.deltaTime, 0f);
+        }
     }
 
 }
