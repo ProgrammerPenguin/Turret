@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c8c7487959f5a4387d300e2c0e0cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpeed: 40
-  BigBulletSpeed: 20
-  SmallBulletSpeed: 80
+  BulletSpeed: 5
+  BigBulletSpeed: 5
+  SmallBulletSpeed: 5
   BulletSize: 0.2
   BigBulletSize: 0.4
   SmallBulletSize: 0.1
