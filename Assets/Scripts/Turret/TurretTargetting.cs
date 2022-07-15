@@ -17,7 +17,7 @@ public class TurretTargetting : MonoBehaviour
             if (other.tag == "Player")
             {
                 IsTargettingOn = true;
-                Target = other.gameObject;
+                 Target = other.gameObject;
             }
         }
         else
@@ -35,7 +35,6 @@ public class TurretTargetting : MonoBehaviour
 
     private bool isTargetInsight(Vector3 turret, Vector3 target, Vector3 forward)
     {
-        
         Vector3 targetDirection = (target - turret).normalized;
 
         float dotProduct = Vector3.Dot(forward.normalized, targetDirection);
